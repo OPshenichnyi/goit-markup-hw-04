@@ -237,6 +237,7 @@ body{
     margin-bottom: 8px;
 }
 .icon-advantage{
+    border-radius: 4px;
     background-color: #F4F4FD;
     display: flex;
     height: 112px;
