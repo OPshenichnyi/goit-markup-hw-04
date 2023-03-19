@@ -51,7 +51,6 @@ body{
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    /* border: solid 1px red; */
 }
 
 /* Section Set */
@@ -88,7 +87,6 @@ body{
 }
 .nav-logo-letters{
     color:#2e2f42;
-    
 }
 
 /*-------- Menu nav----------- */
@@ -116,7 +114,6 @@ body{
 .nav-link:focus {
     color: var(--color-link-focus)
 }
-
 .nav-list{
     display: flex;   
 }
@@ -152,7 +149,6 @@ body{
 /*------------ Hero------------  */
 
 .hero-style{
-    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     max-width: 1440px;
@@ -166,10 +162,8 @@ body{
 
     padding-bottom: 188px;
     padding-top: 188px;
-    text-align: center;
- 
+    text-align: center; 
 }
-
 .hero-title{
     font-size: 56px;
     line-height: 1.07;
@@ -179,9 +173,7 @@ body{
     max-width: 496px;        /*  provisional style */
     margin-left: auto;       /*  provisional style */
     margin-right: auto;      /*  provisional style */
-
 }
-
 .hero-buton{
     background: #4D5AE5;
     font-family: Roboto, sans-serif;
@@ -246,8 +238,10 @@ body{
 }
 .icon-advantage{
     background-color: #F4F4FD;
-    display: block;
-    padding: 24px 100px 24px 100px;
+    display: flex;
+    height: 112px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 8px;
 
 }
@@ -300,12 +294,16 @@ body{
     margin-top: 8px;
     
 }
+.social-item{
+    width: 40px;
+    height: 40px;
+}
 .social-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: #4D5AE5;
 }
@@ -321,28 +319,29 @@ body{
     gap: 24px;
 
 }
-.customer-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: #8E8F99;
-    width: 168px;
-    height: 88px;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    padding: 16px 32px;
-    cursor: pointer;
 
+.customer-item{
+width: 168px;
+height: 88px;
 }
-.customer-item:hover,
-.customer-item:focus{
-    border-color: #404BBF;
-    fill: #404BBF;
+
+.customer-link{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+fill: #8E8F99;
+border: 1px solid #8E8F99;
+border-radius: 4px;
 }
+
 .customer-link:hover,
-.customer-link:focus {
+.customer-link:focus{
     fill: #404BBF;
+    border-color: #404BBF;
 }
+
 /*------------ Footer------------  */
 .footer {
     padding-top: 100px;
@@ -351,11 +350,10 @@ body{
     background-color: #2E2F42;
     color: #E7E9FC;
 }
-
 .footer-info{
     display: flex;
+    align-items: baseline;
 }
-
 .nav-logo-footer {
     color: #4d5ae5;
     font-family: Raleway, sans-serif;
@@ -368,42 +366,38 @@ body{
     display: inline-block;
     margin-bottom: 16px;
 }
-
 .logo-footer {
     color: #F4F4FD;
     font-size: 18px;
     line-height: 1.5;
 }
-
 .text-footer {
     max-width: 264px;
 }
-
 .footer-logo{
     margin-right: 120px;
 }
-
-
 .footer-social-list{
     display: flex;
     gap: 16px;
 }
-
+.footer-list-item{
+    width: 40px;
+    height: 40px;
+}
 .foter-social-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: #2E2F42;
-
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .foter-social-link:hover,
 .foter-social-link:focus{
     background-color: #31D0AA;
 }
-
 .footer-name-social{
     font-weight: 500;
     font-size: 16px;
@@ -436,6 +430,9 @@ body{
     background-color: var(--color-btn-focus);
     color: var(--text-btn-focus);
     border-color: transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-filter{
@@ -443,12 +440,7 @@ body{
     justify-content: center;
     margin-bottom: 72px;
 }
-.btn-item:hover,
-.btn-item:focus{
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 2px 1px rgba(0, 0, 0, 0.08), 
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+
 
 .btn-item:not(:last-child){
     margin-right: var(--set-gep-colum);
@@ -472,10 +464,12 @@ body{
     margin-left: var(--set-gep-colum);
     margin-top: var(--set-gep-row);
 }
+.portfolio-link{
+    display: block;
+}
 
-.portfolio-item:hover,
-.portfolio-item:focus{
-    border: 1px solid #F4F4FD;
+.portfolio-link:hover,
+.portfolio-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
